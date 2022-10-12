@@ -1,6 +1,6 @@
 var noti = document.querySelector('h1');
 	var select = document.querySelector('.select');
-	var button = document.getElementsByTagName('button');
+	var button = document.querySelectorAll('#button');
 	for(var but of button){
 		but.addEventListener('click', (e)=>{
 			var add = Number(noti.getAttribute('data-count') || 0);
@@ -23,8 +23,8 @@ var noti = document.querySelector('h1');
 			var parent = e.target.parentNode;
 			var clone = parent.cloneNode(true);
 			select.appendChild(clone);
-			clone.lastElementChild.innerText = "Buy-now";
-			
+			clone.lastElementChild.innerText = "Close";
+			clone.onclick = window.close();
 			if (clone) {
 				noti.onclick = ()=>{
 					select.classList.toggle('display');
