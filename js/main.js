@@ -23,8 +23,8 @@ var noti = document.querySelector('h1');
 			var parent = e.target.parentNode;
 			var clone = parent.cloneNode(true);
 			select.appendChild(clone);
-			clone.lastElementChild.innerText = "Close";
-			clone.onclick = window.close();
+			clone.lastElementChild.innerText = "Buy-now";
+			
 			if (clone) {
 				noti.onclick = ()=>{
 					select.classList.toggle('display');
@@ -32,4 +32,3 @@ var noti = document.querySelector('h1');
 			}
 		})
 	}
-	
